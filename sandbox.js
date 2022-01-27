@@ -55,33 +55,49 @@
 //    // i get error if i dont define age
 //    age:55
 // }
-// lesson 5 *************
-//explicit types
-var myNmae;
-//i defined it but not initialized it then say it has to be string type
-var age;
-var condition;
-//age = "ozkan"; not allowed
-age = 250;
-//arrays
-var ninjas;
-//it could be only array with strings
-//ninjas = [8,6,2,"d"] not allowed
-ninjas = ["a", "b"];
-//ninjas.push("d") got an error because i didnt initialize it
-var ninjas1 = [];
-//now i can push
-//union types
-var mixed = [];
-mixed.push(3);
-//mixed.push(true) not allowed
-var uid;
-uid = 124;
-uid = "ozkan";
-//uid = false not allowed
-//objects
-var ninjaOne;
-ninjaOne = { name: "ozkan", age: 25 };
-var ninjaTwo;
-//it has to contain only three prop and types of props state below
-//ninjaTwo = {}not allowed
+// // lesson 5 *************
+// //explicit types
+// let myNmae: string;
+// //i defined it but not initialized it then say it has to be string type
+// let age: number;
+// let condition: boolean;
+// //age = "ozkan"; not allowed
+// age = 250;
+// //arrays
+// let ninjas: string[];
+// //it could be only array with strings
+// //ninjas = [8,6,2,"d"] not allowed
+// ninjas = ["a", "b"];
+// //ninjas.push("d") got an error because i didnt initialize it
+// let ninjas1: string[] = [];
+// //now i can push
+// //union types
+// let mixed: (string | number)[] = [];
+// mixed.push(3);
+// //mixed.push(true) not allowed
+// let uid: string | number;
+// uid = 124;
+// uid = "ozkan";
+// //uid = false not allowed
+// //objects
+// let ninjaOne: object;
+// ninjaOne = { name: "ozkan", age: 25 };
+// let ninjaTwo: {
+//   name: string;
+//   age: number;
+//   condition: boolean;
+// };
+// //it has to contain only three prop and types of props state below
+// //ninjaTwo = {}not allowed
+// //lesson 6 ******************************
+// let age:any;  //any type
+// age = true;
+// age = 5;
+// age = "ozkan";
+// age = {name:"ozkan"}
+// let mixed:any[]=[];
+// mixed.push(8)
+// mixed.push("ozkan")
+// //add any type to array
+// let ninja : {name:any,age:any}
+// ninja = {name:45,age:"ozkan"}
