@@ -1,7 +1,5 @@
 //lesson 2*******************
 
-import { NumbersTwoTone } from "@mui/icons-material";
-
 // const myName = "ozkan condek";
 // console.log(myName);
 
@@ -151,17 +149,17 @@ import { NumbersTwoTone } from "@mui/icons-material";
 
 //tsconfig
 
-//lesson 8 **********************
+// //lesson 8 **********************
 
 // let greet: Function;
 // greet = () => {
 //   console.log("hello");
 // };
 
-// const add = (a: number, b: number, c?: number | string ) => {
-// //const add = (a: number, b: number, c: number | string = 10) => {   i am defining default parameter, so i cant use the question mark
-// //and if i call with three parameters like add(3,5,20) then c will equal to 20. overwrite
-// //put the optional paremeter at the end
+// const add = (a: number, b: number, c?: number | string) => {
+//   //const add = (a: number, b: number, c: number | string = 10) => {   i am defining default parameter, so i cant use the question mark
+//   //and if i call with three parameters like add(3,5,20) then c will equal to 20. overwrite
+//   //put the optional paremeter at the end
 //   console.log(a + b);
 //   console.log(c);
 //   // if i dont return anythink in function it gonna return void actually. Lack of return
@@ -169,11 +167,11 @@ import { NumbersTwoTone } from "@mui/icons-material";
 // //c is not necessary if i use question mark, but i dont use, i cant call the function with 2 parameters
 // add(3, 5);
 
-// const minus = (a:number,b:number)=>{
-//     return a+b
-// }
+// const minus = (a: number, b: number) => {
+//   return a + b;
+// };
 
-// let result = minus(4,5)
+// let result = minus(4, 5);
 
 // //result = "ozkan"  not allowed because we defined a datatype for result
 
@@ -193,38 +191,39 @@ import { NumbersTwoTone } from "@mui/icons-material";
 //   console.log(`${user.name} says hello to you`);
 // };
 
-//lesson-10***************************
+// //lesson-10***************************
 
-//let greet = Function;
+// //let greet = Function;
 
-//example 1
+// //example 1
 
-let greet: (a: string, b: string) => void;
-// in the future steps this function gonnna fallow this
-greet = (name: string, greeting: string) => {
-  //greet = (name:string,greeting:number)=>{  not allowed
-  console.log(`${name} says ${greeting}`);
-};
+// let greet: (a: string, b: string) => void;
+// // in the future steps this function gonnna fallow this
+// greet = (name: string, greeting: string) => {
+//   //greet = (name:string,greeting:number)=>{  not allowed
+//   console.log(`${name} says ${greeting}`);
+// };
 
-//example2
+// //example2
 
-let calc: (a: number, b: number, c: string) => number;
-//this function returns a number
+// let calc: (a: number, b: number, c: string) => number;
+// //this function returns a number
 
-calc = (numOne: number, numTwo: number, action: string) => {
-  //calc = (numOne: number, numTwo: number, action: string):number => { i don have to write it extra because i defined a path for it
-  if (action === "add") {
-    return numOne + numTwo;
-  } else {
-    return numOne;
-  }
-};
+// calc = (numOne: number, numTwo: number, action: string) => {
+//   //calc = (numOne: number, numTwo: number, action: string):number => { i don have to write it extra because i defined a path for it
+//   if (action === "add") {
+//     return numOne + numTwo;
+//   } else {
+//     return numOne;
+//   }
+// };
 
-//example3
+// //example3
 
 let logDetails: (obj: { name: string; age: number }) => void;
 
 type person = { name: string; age: number };
 logDetails = (ninja: person) => {
   console.log(`${ninja.name} is ${ninja.age} years old`);
+  //  return ninja.name;  i said void but i can also add a return
 };
