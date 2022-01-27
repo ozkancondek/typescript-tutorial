@@ -124,3 +124,15 @@
 // }
 // let result = minus(4,5)
 // //result = "ozkan"  not allowed because we defined a datatype for result
+// //lesson-9***************
+// type StringOrNum = string | number;
+// type objWithName = { name: string; uid: StringOrNum };
+// // const logDetails = (uid:string|number,item:string)=>{
+// //     console.log(`${item} has a uid of ${uid}`)
+// // }
+// const logDetails = (uid: StringOrNum, item: string) => {
+//   console.log(`${item} has a uid of ${uid}`);
+// };
+// const greet = (user: objWithName) => {
+//   console.log(`${user.name} says hello to you`);
+// };
