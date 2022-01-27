@@ -1,5 +1,6 @@
 "use strict";
 //lesson 2*******************
+Object.defineProperty(exports, "__esModule", { value: true });
 // const myName = "ozkan condek";
 // console.log(myName);
 // //get inputs
@@ -136,3 +137,29 @@
 // const greet = (user: objWithName) => {
 //   console.log(`${user.name} says hello to you`);
 // };
+//lesson-10***************************
+//let greet = Function;
+//example 1
+let greet;
+// in the future steps this function gonnna fallow this
+greet = (name, greeting) => {
+    //greet = (name:string,greeting:number)=>{  not allowed
+    console.log(`${name} says ${greeting}`);
+};
+//example2
+let calc;
+//this function returns a number
+calc = (numOne, numTwo, action) => {
+    //calc = (numOne: number, numTwo: number, action: string):number => { i don have to write it extra because i defined a path for it
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne;
+    }
+};
+//example3
+let logDetails;
+logDetails = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
+};

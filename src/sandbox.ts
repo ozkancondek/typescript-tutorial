@@ -1,5 +1,7 @@
 //lesson 2*******************
 
+import { NumbersTwoTone } from "@mui/icons-material";
+
 // const myName = "ozkan condek";
 // console.log(myName);
 
@@ -190,3 +192,39 @@
 // const greet = (user: objWithName) => {
 //   console.log(`${user.name} says hello to you`);
 // };
+
+//lesson-10***************************
+
+//let greet = Function;
+
+//example 1
+
+let greet: (a: string, b: string) => void;
+// in the future steps this function gonnna fallow this
+greet = (name: string, greeting: string) => {
+  //greet = (name:string,greeting:number)=>{  not allowed
+  console.log(`${name} says ${greeting}`);
+};
+
+//example2
+
+let calc: (a: number, b: number, c: string) => number;
+//this function returns a number
+
+calc = (numOne: number, numTwo: number, action: string) => {
+  //calc = (numOne: number, numTwo: number, action: string):number => { i don have to write it extra because i defined a path for it
+  if (action === "add") {
+    return numOne + numTwo;
+  } else {
+    return numOne;
+  }
+};
+
+//example3
+
+let logDetails: (obj: { name: string; age: number }) => void;
+
+type person = { name: string; age: number };
+logDetails = (ninja: person) => {
+  console.log(`${ninja.name} is ${ninja.age} years old`);
+};
