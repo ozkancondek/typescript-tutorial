@@ -147,4 +147,30 @@
 
 //lessono7**************
 
-console.log("ozkan");
+//tsconfig
+
+//lesson 8 **********************
+
+// let greet: Function;
+// greet = () => {
+//   console.log("hello");
+// };
+
+// const add = (a: number, b: number, c?: number | string ) => {
+// //const add = (a: number, b: number, c: number | string = 10) => {   i am defining default parameter, so i cant use the question mark
+// //and if i call with three parameters like add(3,5,20) then c will equal to 20. overwrite
+// //put the optional paremeter at the end
+//   console.log(a + b);
+//   console.log(c);
+//   // if i dont return anythink in function it gonna return void actually. Lack of return
+// };
+// //c is not necessary if i use question mark, but i dont use, i cant call the function with 2 parameters
+// add(3, 5);
+
+// const minus = (a:number,b:number)=>{
+//     return a+b
+// }
+
+// let result = minus(4,5)
+
+// //result = "ozkan"  not allowed because we defined a datatype for result
