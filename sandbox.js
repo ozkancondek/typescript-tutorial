@@ -55,3 +55,33 @@
 //    // i get error if i dont define age
 //    age:55
 // }
+// lesson 5 *************
+//explicit types
+var myNmae;
+//i defined it but not initialized it then say it has to be string type
+var age;
+var condition;
+//age = "ozkan"; not allowed
+age = 250;
+//arrays
+var ninjas;
+//it could be only array with strings
+//ninjas = [8,6,2,"d"] not allowed
+ninjas = ["a", "b"];
+//ninjas.push("d") got an error because i didnt initialize it
+var ninjas1 = [];
+//now i can push
+//union types
+var mixed = [];
+mixed.push(3);
+//mixed.push(true) not allowed
+var uid;
+uid = 124;
+uid = "ozkan";
+//uid = false not allowed
+//objects
+var ninjaOne;
+ninjaOne = { name: "ozkan", age: 25 };
+var ninjaTwo;
+//it has to contain only three prop and types of props state below
+//ninjaTwo = {}not allowed
