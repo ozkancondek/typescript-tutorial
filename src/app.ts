@@ -42,14 +42,19 @@
 //what is class:blueprint for an object
 
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+  //   readonly client: string; //i can read from outside but cant change the value
+  //    private details: string; // now i cant access to details directly from outside
+  //   public  amount: number; //its default value and everone can make arregement on it
 
-  constructor(c: string, d: string, a: number) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
+  constructor(
+    readonly client: string,
+    private details: string,
+    public amount: number
+  ) {
+    //constructor(c: string, d: string, a: number) { i can also use like this
+    // this.client = c;
+    // this.details = d;
+    // this.amount = a;
   }
 
   format() {
@@ -69,7 +74,17 @@ invoices.push(invTwo);
 console.log(invoices);
 
 //lesson-13*****************
+
+invoices.forEach((inv) => {
+  console.log(inv.client, inv.amount, inv.format()); // inv.details not gonna work because it private
+});
+
 // now i can change the props of object because its public
 
-invOne.client = "ozkan"; //i can change the client
-console.log(invOne);
+//invOne.client = "changedclıentname"; // if it default public i can change the client because ıts publıc
+
+//   readonly client: string; //i can read from outside but cant change the value
+//    private details: string; // now i cant access to details directly from outside
+//   public  amount: number; //its default value and everone can make arregement on it
+
+//lesson-13*****************
