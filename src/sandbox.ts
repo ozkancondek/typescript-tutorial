@@ -1,4 +1,4 @@
-//lesson 2*******************
+// //lesson 2*******************
 
 // const myName = "ozkan condek";
 // console.log(myName);
@@ -11,23 +11,23 @@
 //   console.log(input);
 // });
 
-//lesson 3************
+// //lesson 3************
 
-//we have only one number type
+// //we have only one number type
 
 // let myName = "ozkan condek";
 // let age = 25;
 // let condition = false;
 
-//myName = 20;  not allowed to change type but its allowed for the same type
+// //myName = 20;  not allowed to change type but its allowed for the same type
 // myName = "example";
 
-// const circ = (diameter) => {
+// const circ = (diameter: any) => {
 //   return diameter * Math.PI;
 // };
 
 // console.log(circ(1));
-//console.log(circ("hello"));   NuN
+// //console.log(circ("hello"));   NuN
 
 // const circ2 = (diameter: number) => {
 //   return diameter * Math.PI;
@@ -36,7 +36,7 @@
 // console.log(circ(5));
 //console.log(circ("hello"));   Nuot gonna work
 
-//lesson 4 ***************************
+// //lesson 4 ***************************
 
 // //array
 
@@ -82,7 +82,7 @@
 
 // //explicit types
 // let myNmae: string;
-// //i defined it but not initialized it then say it has to be string type
+// //i declared it but not initialized it then say it has to be string type
 // let age: number;
 // let condition: boolean;
 
@@ -95,14 +95,17 @@
 // //it could be only array with strings
 
 // //ninjas = [8,6,2,"d"] not allowed
+// //ninjas.push("d") //got an error because i didnt initialize it
 // ninjas = ["a", "b"];
-// //ninjas.push("d") got an error because i didnt initialize it
+// ninjas.push("d");
+
 // let ninjas1: string[] = [];
-// //now i can push
+// //now i can push but only the string datatypes
 
 // //union types
 
 // let mixed: (string | number)[] = [];
+// //an array which is consisst of only strings and numbers
 
 // mixed.push(3);
 // //mixed.push(true) not allowed
@@ -126,24 +129,24 @@
 // //it has to contain only three prop and types of props state below
 // //ninjaTwo = {}not allowed
 
-// //lesson 6 ******************************
-// let age:any;  //any type
+//lesson 6 ******************************
+let age: any; //any type
 
-// age = true;
+age = true;
 
-// age = 5;
-// age = "ozkan";
-// age = {name:"ozkan"}
+age = 5;
+age = "ozkan";
+age = { name: "ozkan" };
 
-// let mixed:any[]=[];
+let mixed: any[] = [];
 
-// mixed.push(8)
-// mixed.push("ozkan")
+mixed.push(8);
+mixed.push("ozkan");
 
-// //add any type to array
+//add any type to array
 
-// let ninja : {name:any,age:any}
-// ninja = {name:45,age:"ozkan"}
+let ninja: { name: any; age: any };
+ninja = { name: 45, age: "ozkan" };
 
 //lessono7**************
 
@@ -173,7 +176,7 @@
 
 // let result = minus(4, 5);
 
-// //result = "ozkan"  not allowed because we defined a datatype for result
+// //result = "ozkan"  not allowed because we defined a datatype for result and its type is number+number = number
 
 // //lesson-9***************
 
@@ -200,7 +203,7 @@
 // let greet: (a: string, b: string) => void;
 // // in the future steps this function gonnna fallow this
 // greet = (name: string, greeting: string) => {
-//   //greet = (name:string,greeting:number)=>{  not allowed
+//   //greet = (name:string,greeting:number)=>{  not allowed because type of parameter greeting state in path
 //   console.log(`${name} says ${greeting}`);
 // };
 
@@ -220,10 +223,10 @@
 
 // //example3
 
-let logDetails: (obj: { name: string; age: number }) => void;
+// let logDetails: (obj: { name: string; age: number }) => void;
 
-type person = { name: string; age: number };
-logDetails = (ninja: person) => {
-  console.log(`${ninja.name} is ${ninja.age} years old`);
-  //  return ninja.name;  i said void but i can also add a return
-};
+// type person = { name: string; age: number };
+// logDetails = (ninja: person) => {
+//   console.log(`${ninja.name} is ${ninja.age} years old`);
+//   //  return ninja.name;  i said void but i can also add a return
+// };
