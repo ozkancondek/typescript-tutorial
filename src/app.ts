@@ -36,3 +36,40 @@
 //   console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 //   //console.log(type.value, tofrom.value, details.value, amount.value);  value of amount is string but i want to is as a number
 // });
+
+//lesson-12**************************
+//classes
+//what is class:blueprint for an object
+
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
+
+  constructor(c: string, d: string, a: number) {
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+
+  format() {
+    return `${this.client} owes €${this.amount} for ${this.details}`;
+  }
+}
+
+const invOne = new Invoice("mario", "work on a mario website", 250);
+const invTwo = new Invoice("ozkan", "work on a ozkan website", 300);
+
+let invoices: Invoice[] = [];
+//only objects which are created in Invoice class can added to this array
+//invoices.push("ozkan") not allowed
+invoices.push(invOne);
+invoices.push(invTwo);
+
+console.log(invoices);
+
+//lesson-13*****************
+// now i can change the props of object because its public
+
+invOne.client = "ozkan"; //i can change the client
+console.log(invOne);
