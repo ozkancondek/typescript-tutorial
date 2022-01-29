@@ -43,9 +43,11 @@ const list = new ListTemplate(ul);
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
   let doc: HasFormatter;
+  let values: [string, string, number];
+  values = [tofrom.value, details.value, amount.valueAsNumber];
 
   if (type.value === "invoice") {
-    doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    doc = new Invoice(...values);
   } else {
     doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
   }
@@ -171,3 +173,40 @@ const docthree: Resource<object> = {
 };
 
 //T could be object, i cant assign it a string
+
+//lesson-19 Enums***************************************************
+
+enum ResourceType {
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
+}
+
+interface ResourceT<T> {
+  uid: number;
+  resourceType: ResourceType;
+  data: T;
+}
+
+const docROne: ResourceT<object> = {
+  uid: 1,
+  resourceType: ResourceType.BOOK,
+  data: { title: "name of the wind" },
+};
+
+//lesson-20 tuples*****************************
+
+let arr = ["ozkan", 4, true];
+//allowed
+// arr[0]=false
+// arr[1]="ozkan"
+// arr = []
+// arr = [1,2,"ozkan",false]
+
+let tup: [string, number, boolean] = ["ozkan", 5, false];
+
+let student: [string, number];
+//follow the path
+student = ["ozkan", 3507];

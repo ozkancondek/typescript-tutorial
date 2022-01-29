@@ -30,8 +30,10 @@ const list = new ListTemplate(ul);
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let doc;
+    let values;
+    values = [tofrom.value, details.value, amount.valueAsNumber];
     if (type.value === "invoice") {
-        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
@@ -124,3 +126,28 @@ const docthree = {
     data: { name: "ozkan" },
 };
 //T could be object, i cant assign it a string
+//lesson-19 Enums***************************************************
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
+const docROne = {
+    uid: 1,
+    resourceType: ResourceType.BOOK,
+    data: { title: "name of the wind" },
+};
+//lesson-20 tuples*****************************
+let arr = ["ozkan", 4, true];
+//allowed
+// arr[0]=false
+// arr[1]="ozkan"
+// arr = []
+// arr = [1,2,"ozkan",false]
+let tup = ["ozkan", 5, false];
+let student;
+//follow the path
+student = ["ozkan", 3507];
