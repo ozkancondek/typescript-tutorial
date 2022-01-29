@@ -1,3 +1,8 @@
+import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/Payment.js";
+import { HasFormatter } from "./interfaces/HasFormatter.js";
+//import js file
+
 // //lesson-11***************************
 
 // const anchor = document.querySelector(`a`)!;
@@ -17,7 +22,7 @@
 // //here if i hover the form, its an html element
 // //const form = document.querySelector(".new-item-form"); //with class name
 // //here when i hover, i see that it is only an element and to prevent it
-// const form = document.querySelector(".new-item-form") as HTMLFormElement; //with class name
+const form = document.querySelector(".new-item-form") as HTMLFormElement; //with class name
 
 // console.log(form);
 
@@ -25,13 +30,23 @@
 
 // //grap all inputs from html
 
-// const type = document.querySelector("#type") as HTMLSelectElement;
-// const tofrom = document.querySelector("#tofrom") as HTMLInputElement;
-// const details = document.querySelector("#details") as HTMLInputElement;
-// const amount = document.querySelector("#amount") as HTMLInputElement;
+const type = document.querySelector("#type") as HTMLSelectElement;
+const tofrom = document.querySelector("#tofrom") as HTMLInputElement;
+const details = document.querySelector("#details") as HTMLInputElement;
+const amount = document.querySelector("#amount") as HTMLInputElement;
 
-// form.addEventListener("submit", (e: Event) => {
-//   e.preventDefault();
+form.addEventListener("submit", (e: Event) => {
+  e.preventDefault();
+  let doc: HasFormatter;
+
+  if (type.value === "invoice") {
+    doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+  } else {
+    doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+  }
+
+  console.log(doc);
+});
 
 //   console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 //   //console.log(type.value, tofrom.value, details.value, amount.value);  value of amount is string but i want to is as a number
@@ -46,7 +61,7 @@
 
 /********************************************/
 
-interface IsPerson {
+/* interface IsPerson {
   name: string;
   age: number;
   speak(m: string): void;
@@ -71,10 +86,18 @@ const greetPerson = (person: IsPerson) => {
   console.log("helo ", person.name);
 };
 //greetPerson({nmae:"ozkan" }) not allowed
-greetPerson(me);
+greetPerson(me); */
 
-import { Invoice } from "./classes/Invoice.js";
-//import js file
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
+
+docOne = new Invoice("ozkan", "web developer", 250);
+docTwo = new Payment("condek", "fulllstack ", 2589);
+let docs: HasFormatter[] = [];
+docs.push(docOne);
+docs.push(docTwo);
+
+console.log(docs);
 
 const invOne = new Invoice("mario", "work on a mario website", 250);
 const invTwo = new Invoice("ozkan", "work on a ozkan website", 300);
@@ -110,3 +133,5 @@ invoices.forEach((inv) => {
 //html file, add type="module"
 
 //lesson-15 interfaces
+
+//lesson-16:interfaces with classes

@@ -1,3 +1,4 @@
+//use HasFormatter as a path
 export class Invoice {
     //   readonly client: string; //i can read from outside but cant change the value
     //    private details: string; // now i cant access to details directly from outside

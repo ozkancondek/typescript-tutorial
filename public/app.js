@@ -1,24 +1,82 @@
+import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/Payment.js";
+//import js file
 // //lesson-11***************************
+// const anchor = document.querySelector(`a`)!;
+// //catch the <a> tag on footer with dom
+// //if i know its exist in html page, i am using !
+// //thats the second method to prevent null return with anchor.href
+// // if (anchor){
+// //     console.log(anchor.href)
+// // }
+// console.log(anchor.href);
+// //pick a form in html
+// //const form  = document.querySelector("form")!; // i know its exist
+// //here if i hover the form, its an html element
+// //const form = document.querySelector(".new-item-form"); //with class name
+// //here when i hover, i see that it is only an element and to prevent it
+const form = document.querySelector(".new-item-form"); //with class name
+// console.log(form);
+// //inputs
+// //grap all inputs from html
+const type = document.querySelector("#type");
+const tofrom = document.querySelector("#tofrom");
+const details = document.querySelector("#details");
+const amount = document.querySelector("#amount");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let doc;
+    if (type.value === "invoice") {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
+});
+//   console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+//   //console.log(type.value, tofrom.value, details.value, amount.value);  value of amount is string but i want to is as a number
+// });
+//lesson-12**************************
+//classes
+//what is class:blueprint for an object
+/**********************************************/
+//Invoice class carried to module. lesson-14
+/********************************************/
+/* interface IsPerson {
+  name: string;
+  age: number;
+  speak(m: string): void;
+  spend(s: number): number;
+}
 //follow this structure
-const me = {
-    name: "ozkan",
-    age: 25,
-    speak(text) {
-        console.log(text);
-    },
-    spend(amount) {
-        console.log("i spend ", amount);
-        return amount;
-    },
+
+const me: IsPerson = {
+  name: "ozkan",
+  age: 25,
+  speak(text: string): void {
+    console.log(text);
+  },
+  spend(amount: number): number {
+    console.log("i spend ", amount);
+    return amount;
+  },
 };
+
 //console.log(me);
-const greetPerson = (person) => {
-    console.log("helo ", person.name);
+const greetPerson = (person: IsPerson) => {
+  console.log("helo ", person.name);
 };
 //greetPerson({nmae:"ozkan" }) not allowed
-greetPerson(me);
-import { Invoice } from "./classes/Invoice.js";
-//import js file
+greetPerson(me); */
+let docOne;
+let docTwo;
+docOne = new Invoice("ozkan", "web developer", 250);
+docTwo = new Payment("condek", "fulllstack ", 2589);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
 const invOne = new Invoice("mario", "work on a mario website", 250);
 const invTwo = new Invoice("ozkan", "work on a ozkan website", 300);
 let invoices = [];
@@ -43,3 +101,4 @@ invoices.forEach((inv) => {
 //update ts config
 //html file, add type="module"
 //lesson-15 interfaces
+//lesson-16:interfaces with classes
