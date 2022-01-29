@@ -41,26 +41,13 @@
 //classes
 //what is class:blueprint for an object
 
-class Invoice {
-  //   readonly client: string; //i can read from outside but cant change the value
-  //    private details: string; // now i cant access to details directly from outside
-  //   public  amount: number; //its default value and everone can make arregement on it
+/**********************************************/
+//Invoice class carried to module. lesson-14
 
-  constructor(
-    readonly client: string,
-    private details: string,
-    public amount: number
-  ) {
-    //constructor(c: string, d: string, a: number) { i can also use like this
-    // this.client = c;
-    // this.details = d;
-    // this.amount = a;
-  }
+/********************************************/
 
-  format() {
-    return `${this.client} owes €${this.amount} for ${this.details}`;
-  }
-}
+import { Invoice } from "./classes/Invoice.js";
+//import js file
 
 const invOne = new Invoice("mario", "work on a mario website", 250);
 const invTwo = new Invoice("ozkan", "work on a ozkan website", 300);
@@ -88,3 +75,9 @@ invoices.forEach((inv) => {
 //   public  amount: number; //its default value and everone can make arregement on it
 
 //lesson-13*****************
+//readonly private public
+
+//lesson-14
+//creating Invoice module
+//update ts config
+//html file, add type="module"
