@@ -143,3 +143,31 @@ invoices.forEach((inv) => {
 //lesson-16:interfaces with classes
 
 //lesson-17: Rendering an HTML Template
+
+//lesson-18 generics
+//reusable blocks of codes
+
+const addUID = <T>(obj: T) => {
+  // const addUID = (obj: object) => {
+  //console.log(firstDoc.name); i cant reach to name
+  let uid = Math.floor(Math.random() * 100);
+  return { ...obj, uid };
+};
+
+let firstDoc = addUID({ name: "ozkan", age: 40 });
+
+console.log(firstDoc.name);
+
+interface Resource<T> {
+  uid: number;
+  resourceName: string;
+  data: T;
+}
+
+const docthree: Resource<object> = {
+  uid: 1,
+  resourceName: "person",
+  data: { name: "ozkan" },
+};
+
+//T could be object, i cant assign it a string
