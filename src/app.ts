@@ -46,6 +46,33 @@
 
 /********************************************/
 
+interface IsPerson {
+  name: string;
+  age: number;
+  speak(m: string): void;
+  spend(s: number): number;
+}
+//follow this structure
+
+const me: IsPerson = {
+  name: "ozkan",
+  age: 25,
+  speak(text: string): void {
+    console.log(text);
+  },
+  spend(amount: number): number {
+    console.log("i spend ", amount);
+    return amount;
+  },
+};
+
+//console.log(me);
+const greetPerson = (person: IsPerson) => {
+  console.log("helo ", person.name);
+};
+//greetPerson({nmae:"ozkan" }) not allowed
+greetPerson(me);
+
 import { Invoice } from "./classes/Invoice.js";
 //import js file
 
@@ -81,3 +108,5 @@ invoices.forEach((inv) => {
 //creating Invoice module
 //update ts config
 //html file, add type="module"
+
+//lesson-15 interfaces
