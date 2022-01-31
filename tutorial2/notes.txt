@@ -1,0 +1,15 @@
+static typing
+-less error
+-fast
+-typescript 
+Dynamic types
+-runtime errors
+-javascript  
+
+
+
+setup
+-npm install -g typescript  
+
+
+tsc = typescript complier
