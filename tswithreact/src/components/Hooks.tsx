@@ -22,6 +22,9 @@ export const Hooks: React.FC<IHooks> = ({ name, age }) => {
   const inputref = useRef<HTMLInputElement>(null);
   const divref = useRef<HTMLDivElement>(null);
   const buttonref = useRef<HTMLButtonElement>(null);
+
+  //reducer
+
   return (
     <div>
       <h1>{name}</h1>
