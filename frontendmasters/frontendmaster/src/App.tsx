@@ -1,19 +1,12 @@
 import "./App.css";
+import { NameTag } from "./lectures/NameTag";
+import { useState } from "react";
 
 function App() {
+  const [name, setMyName] = useState("ozkan"); //it should be a string
   return (
     <div className="App">
-      {" "}
-      <main>
-        <header>
-          <h1>Hello</h1>
-          <p>My Name Is</p>
-        </header>
-        <section className="display-name">
-          <p>[Your Name Here]</p>
-        </section>
-        <footer />
-      </main>
+      <NameTag name={name} />
     </div>
   );
 }
