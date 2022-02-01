@@ -13,3 +13,6 @@ setup
 
 
 tsc = typescript complier
+
+tsc main.js 
+tsc main.js -w 
