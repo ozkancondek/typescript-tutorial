@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Hello } from "./components/Hello";
+import { Hooks } from "./components/Hooks";
 
 function App() {
   let myName = "ozkan";
@@ -17,6 +18,7 @@ function App() {
           console.log(name);
         }}
       />
+      <Hooks name={"ozkan"} age={6568} />
     </div>
   );
 }
