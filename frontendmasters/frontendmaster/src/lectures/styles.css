@@ -41,3 +41,22 @@ footer {
 .display-name p {
   font-family: cursive;
 }
+.answer {
+  padding: 1em;
+}
+.question {
+  border: 2px solid dark;
+  margin: 1em 0;
+  box-shadow: 3px 3px 5px dark;
+}
+.question header {
+  font-weight: 700;
+  background-color: light;
+  border-bottom: 1px solid green;
+  padding: 1em;
+}
+
+.blurred {
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
