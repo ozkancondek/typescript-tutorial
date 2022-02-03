@@ -22,7 +22,8 @@ function App() {
       {/*  <BrokenCounter /> */}
       {/*  <ClassBasedComponents incident={"Coffee Spill"} /> */}
       {/*  <CounterWithHooksandEvents /> */}
-      <DogFacts />
+      {/* <DogFacts /> */}
+      ozkan
     </div>
   );
 }
