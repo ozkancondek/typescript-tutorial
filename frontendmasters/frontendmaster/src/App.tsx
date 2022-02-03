@@ -7,6 +7,7 @@ import { questions } from "./lectures/questions";
 import { BrokenCounter } from "./lectures/BrokenCounter";
 import ClassBasedComponents from "./lectures/ClassBasedComponents";
 import CounterWithHooksandEvents from "./lectures/CounterWithHooksandEvents";
+import { DogFacts } from "./lectures/DogFacts";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -20,7 +21,8 @@ function App() {
       </main> */}
       {/*  <BrokenCounter /> */}
       {/*  <ClassBasedComponents incident={"Coffee Spill"} /> */}
-      <CounterWithHooksandEvents />
+      {/*  <CounterWithHooksandEvents /> */}
+      <DogFacts />
     </div>
   );
 }
