@@ -8,6 +8,7 @@ import { BrokenCounter } from "./lectures/BrokenCounter";
 import ClassBasedComponents from "./lectures/ClassBasedComponents";
 import CounterWithHooksandEvents from "./lectures/CounterWithHooksandEvents";
 import { DogFacts } from "./lectures/DogFacts";
+import Typereducer from "./lectures/Typereducer";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -23,7 +24,7 @@ function App() {
       {/*  <ClassBasedComponents incident={"Coffee Spill"} /> */}
       {/*  <CounterWithHooksandEvents /> */}
       {/* <DogFacts /> */}
-      ozkan
+      <Typereducer />
     </div>
   );
 }
