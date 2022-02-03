@@ -10,6 +10,7 @@ import CounterWithHooksandEvents from "./lectures/CounterWithHooksandEvents";
 import { DogFacts } from "./lectures/DogFacts";
 import Typereducer from "./lectures/Typereducer";
 import CounterReducer from "./lectures/CounterReducer";
+import { ContextApi } from "./lectures/contaexapi/ContextApi";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -26,7 +27,8 @@ function App() {
       {/*  <CounterWithHooksandEvents /> */}
       {/* <DogFacts /> */}
       {/* <Typereducer /> */}
-      <CounterReducer />
+      {/*  <CounterReducer /> */}
+      <ContextApi />
     </div>
   );
 }
