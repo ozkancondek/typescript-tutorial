@@ -6,6 +6,7 @@ import { UseStateHook } from "./lectures/UseStateHook";
 import { questions } from "./lectures/questions";
 import { BrokenCounter } from "./lectures/BrokenCounter";
 import ClassBasedComponents from "./lectures/ClassBasedComponents";
+import CounterWithHooksandEvents from "./lectures/CounterWithHooksandEvents";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -18,7 +19,8 @@ function App() {
         ))}
       </main> */}
       {/*  <BrokenCounter /> */}
-      <ClassBasedComponents incident={"Coffee Spill"} />
+      {/*  <ClassBasedComponents incident={"Coffee Spill"} /> */}
+      <CounterWithHooksandEvents />
     </div>
   );
 }
