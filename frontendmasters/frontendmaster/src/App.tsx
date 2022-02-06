@@ -15,6 +15,7 @@ import { UtilityTypes } from "./lectures/utility/UtilityTypes";
 import { HigherorderComponents } from "./lectures/higherOrderComponents/HigherOrderComponents";
 import { HOCExample } from "./lectures/higherOrderComponents/example/HOCExample";
 import { LimitingProps } from "./lectures/limitingProps/LimitingProps";
+import { PolymorphicComponents } from "./lectures/polymorphicCpmponents/PolymorphicComponents";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -36,7 +37,8 @@ function App() {
       {/*   <UtilityTypes /> */}
       {/*   <HigherorderComponents /> */}
       {/*  <HOCExample /> */}
-      <LimitingProps />
+      {/*  <LimitingProps /> */}
+      <PolymorphicComponents />
     </div>
   );
 }
