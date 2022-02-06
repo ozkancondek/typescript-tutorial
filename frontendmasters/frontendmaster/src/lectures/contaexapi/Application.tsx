@@ -7,6 +7,9 @@ import { ColorSliders } from "./ColorSliders";
 import { toRGB } from "./utilities";
 import { reducer } from "./reducer";
 import { useTheme } from "./theme-context";
+import { ColorAdjustment } from "./ColorAdjustment";
+import { ColorSlider } from "./ColorSlider";
+import { ColorInput } from "./ColorInput";
 
 const Application = () => {
   const themes = useTheme();
@@ -23,9 +26,11 @@ const Application = () => {
         ...themes.darkb,
       }}
     >
-      <ColorSwatch {...rgb} />
+      <ColorSwatch />
       <ColorInputs {...rgb} />
-      <ColorSliders {...rgb} dispatch={dispatch} />
+      {/* <ColorSliders /> */}
+      <ColorAdjustment Adjustment={ColorSlider} />
+      <ColorAdjustment Adjustment={ColorInput} />
     </main>
   );
 };

@@ -20,7 +20,7 @@ const defaultTheme: Themes = {
   },
 };
 
-export const ThemeContext = React.createContext(defaultTheme);
+export const ThemeContext = React.createContext<Themes>(defaultTheme);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   return (
