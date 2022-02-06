@@ -12,6 +12,7 @@ import Typereducer from "./lectures/Typereducer";
 import CounterReducer from "./lectures/CounterReducer";
 import { ContextApi } from "./lectures/contaexapi/ContextApi";
 import { UtilityTypes } from "./lectures/utility/UtilityTypes";
+import { HigherorderComponents } from "./lectures/higherOrderComponents/HigherOrderComponents";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -30,7 +31,8 @@ function App() {
       {/* <Typereducer /> */}
       {/*  <CounterReducer /> */}
       {/* <ContextApi /> */}
-      <UtilityTypes />
+      {/*   <UtilityTypes /> */}
+      <HigherorderComponents />
     </div>
   );
 }
