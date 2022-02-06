@@ -11,6 +11,7 @@ import { DogFacts } from "./lectures/DogFacts";
 import Typereducer from "./lectures/Typereducer";
 import CounterReducer from "./lectures/CounterReducer";
 import { ContextApi } from "./lectures/contaexapi/ContextApi";
+import { UtilityTypes } from "./lectures/utility/UtilityTypes";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -28,7 +29,8 @@ function App() {
       {/* <DogFacts /> */}
       {/* <Typereducer /> */}
       {/*  <CounterReducer /> */}
-      <ContextApi />
+      {/* <ContextApi /> */}
+      <UtilityTypes />
     </div>
   );
 }

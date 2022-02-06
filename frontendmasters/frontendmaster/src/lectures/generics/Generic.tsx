@@ -18,3 +18,15 @@ function createNode<T>(value: T): Link<T> {
 const node = createNode("ozkan");
 
 const node2 = createNode(2);
+
+function identity<T>(value: T): T {
+  return value;
+}
+
+const two = identity(2);
+const name = identity("ozkan");
+
+function tap<T>(arg: T, fn: (x: T) => void): T {
+  fn(arg);
+  return arg;
+}
