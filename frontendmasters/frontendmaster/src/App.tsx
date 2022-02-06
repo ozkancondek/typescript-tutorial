@@ -14,6 +14,7 @@ import { ContextApi } from "./lectures/contaexapi/ContextApi";
 import { UtilityTypes } from "./lectures/utility/UtilityTypes";
 import { HigherorderComponents } from "./lectures/higherOrderComponents/HigherOrderComponents";
 import { HOCExample } from "./lectures/higherOrderComponents/example/HOCExample";
+import { LimitingProps } from "./lectures/limitingProps/LimitingProps";
 
 function App() {
   const [name, setMyName] = useState("özkan"); //it should be a string
@@ -34,7 +35,8 @@ function App() {
       {/* <ContextApi /> */}
       {/*   <UtilityTypes /> */}
       {/*   <HigherorderComponents /> */}
-      <HOCExample />
+      {/*  <HOCExample /> */}
+      <LimitingProps />
     </div>
   );
 }
